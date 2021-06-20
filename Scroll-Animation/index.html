@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="/node_modules/sal.js/dist/sal.css">
+   <title>Scroll animation</title>
+</head>
+<style>
+   * {
+      padding: 0;
+      margin: 0;
+   }
+
+   section {
+      height: 100vh;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+   }
+
+   section:nth-child(1) {
+      background-color: rgb(16, 22, 34);
+   }
+
+   section:nth-child(2) {
+      background: cornsilk;
+   }
+
+
+
+   div {
+      font-size: 22px;
+   }
+
+   .white {
+      color: azure;
+   }
+.box{
+   
+}
+   
+</style>
+
+<body>
+   <section>
+      <div>
+         <div class="white" data-sal="fade"
+            style="--sal-duration: 1s; --sal-delay: .2s;font-size: 30px;display: block;">Hi</div>
+
+         <div class="white" data-sal="fade"
+            style="--sal-duration: 1s; --sal-delay: 1s;display: block; padding-top: 10px; font-size:20px; letter-spacing: 3px;">
+            Welcome to Scroll Animation</div>
+      </div>
+
+   </section>
+   <section>
+
+      <div class="box" data-sal="slide-right"
+         style="--sal-duration: 1s; --sal-delay: .2s;height: 50px; width: 50px; background: green;border-radius: 5px;margin: 0 10px; ">
+      </div>
+      <div class="box" data-sal="slide-right"
+         style="--sal-duration: 1s; --sal-delay: .6s;height: 50px; width: 50px; background: orangered;border-radius: 5px;margin: 0 10px; ">
+      </div>
+      <div class="box" data-sal="slide-right"
+         style="--sal-duration: 1s; --sal-delay: 1s;height: 50px; width: 50px; background: darkcyan;border-radius: 5px;margin: 0 10px; ">
+      </div>
+   </section>
+
+
+
+
+</body>
+
+
+<script src="/node_modules/sal.js/dist/sal.js"></script>
+<script>
+
+   sal({
+      threshold: 1,
+      once: false,
+
+
+   });</script>
+
+</html>
